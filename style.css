@@ -1,0 +1,156 @@
+body {
+  margin: 0;
+  font-family: Inter, system-ui, sans-serif;
+}
+
+.container {
+  width: 100vw;
+  height: 100svh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.decor {
+  position: absolute;
+}
+
+.decor-left,
+.decor-right {
+  top: 100%;
+  width: 800px;
+}
+
+.decor-left {
+  transform: translate(-100%, -40%);
+  left: calc(50% - 90px);
+}
+
+.decor-right {
+  transform: translate(100%, -40%);
+  right: calc(50% - 90px);
+}
+
+.decor-middle {
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.decor-desktop {
+  width: min(1000px, calc(100vw - 80px));
+}
+
+.decor-tablet,
+.decor-mobile {
+  width: calc(100% - 32px);
+  margin: 0 auto;
+}
+
+.decor-tablet,
+.decor-mobile {
+  display: none;
+}
+
+img {
+  width: 100%;
+}
+
+.main-content {
+  padding: 8px 14px;
+  height: 24px;
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  align-items: center;
+  border-radius: 20px;
+  background: #f6f6f6;
+}
+
+.text {
+  color: #616664;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: -0.6px;
+}
+
+.company-brand {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 100%;
+  color: #080908;
+
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -0.6px;
+}
+
+.company-brand > .logo {
+  width: 24px;
+  height: 24px;
+}
+
+@media only screen and (max-width: 768px) {
+  .decor-left,
+  .decor-right {
+    width: 464px;
+  }
+
+  .decor-left {
+    transform: translate(-100%, -55%);
+    left: calc(50% - 50px);
+  }
+  
+  .decor-right {
+    transform: translate(100%, -55%);
+    right: calc(50% - 50px);
+  }
+
+  .decor-desktop,
+  .decor-mobile {
+    display: none;
+  }
+
+  .decor-tablet {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .decor-left,
+  .decor-right {
+    width: 250px;
+  }
+
+  .decor-left {
+    transform: translate(-100%, -65%);
+    left: calc(50% - 26px);
+  }
+  
+  .decor-right {
+    transform: translate(100%, -65%);
+    right: calc(50% - 26px);
+  }
+
+  .decor-desktop,
+  .decor-tablet {
+    display: none;
+  }
+
+  .decor-mobile {
+    display: block;
+  }
+
+  .text,
+  .company-brand {
+    font-size: 16px;
+    letter-spacing: -0.48px;
+  }
+}
